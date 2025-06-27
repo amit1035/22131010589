@@ -1,14 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import UrlForm from "./components/UrlForm";
+// src/routes.tsx
+import { Route, Routes } from "react-router-dom";
+import Shortener from "./pages/Shortener";
 import Statistics from "./pages/Statistics";
+import RedirectPage from "./pages/RedirectPage";
 
-const AppRoutes = () => (
-  <BrowserRouter>
+const AppRoutes = () => {
+  return (
     <Routes>
-      <Route path="/" element={<UrlForm />} />
-      <Route path="/stats" element={<Statistics />} />
+      <Route path="/" element={<Shortener />} />
+      <Route path="/statistics" element={<Statistics />} />
+      <Route path="/:shortcode" element={<RedirectPage />} />
     </Routes>
-  </BrowserRouter>
-);
+  );
+};
 
 export default AppRoutes;
