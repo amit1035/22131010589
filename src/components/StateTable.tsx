@@ -1,4 +1,3 @@
-// src/components/StatsTable.tsx
 import { useEffect, useState } from "react";
 import {
   Table,
@@ -29,7 +28,6 @@ const StatsTable = () => {
   const [data, setData] = useState<StatEntry[]>([]);
 
   useEffect(() => {
-    // Simulated data
     const stats = JSON.parse(localStorage.getItem("stats") || "[]");
     setData(stats);
     Log("frontend", "info", "component", "Loaded stats page data");

@@ -1,4 +1,3 @@
-// src/pages/RedirectHandler.tsx
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Log } from "../utils/logger";

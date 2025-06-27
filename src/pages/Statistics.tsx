@@ -20,7 +20,6 @@ const Statistics = () => {
   const [urls, setUrls] = useState<ShortUrlData[]>([]);
 
   useEffect(() => {
-    // Replace with actual fetch if backend supports, else simulate
     const sampleData: ShortUrlData[] = [
       {
         shortUrl: "http://localhost:3000/abcd1",

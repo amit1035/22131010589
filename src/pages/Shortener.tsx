@@ -1,4 +1,3 @@
-// src/pages/Shortener.tsx
 import { Container, Typography } from "@mui/material";
 import UrlForm from "../components/UrlForm";
 import { useEffect } from "react";

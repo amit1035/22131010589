@@ -88,12 +88,11 @@ const UrlForm = () => {
       for (const entry of entries) {
         let code = entry.shortcode?.trim() || generateRandomCode();
 
-        // Ensure uniqueness
         while (!isUniqueShortcode(code)) {
           code = generateRandomCode();
         }
 
-        const validity = entry.validity || 30; // Default to 30 mins
+        const validity = entry.validity || 30; 
         const expiryDate = new Date(Date.now() + validity * 60000).toISOString();
 
         const mapping = {
